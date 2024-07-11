@@ -1,7 +1,82 @@
-<main>
-  <h1>ale + david = chulis 4 ever</h1>
-  <img src="../assets/nutria.jpg" alt="" />
-  <footer>
+<main class="flex flex-col gap-3 p-8">
+  <h1 class="text-center font-semibold">ale + david = chulis 4 ever</h1>
+  <button
+    (click)="openCarta()"
+    class="grid place-content-center focus:outline-none"
+  >
+    <img class="h-20 rounded-lg object-cover" src="../assets/nutria.jpg" />
+  </button>
+  <h2 class="text-center text-gray-700">¡Feliz mesiversario!</h2>
+  <swiper-container speed="500" loop="true" class="w-full">
+    <swiper-slide>
+      <div>
+        <img
+          class="mx-auto h-96 rounded-lg object-cover"
+          src="../assets/img1.JPG"
+        />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div>
+        <img
+          class="mx-auto h-96 rounded-lg object-cover"
+          src="../assets/img2.JPG"
+        />
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div>
+        <video
+          class="mx-auto h-96 rounded-lg object-cover"
+          src="../assets/video1.MP4"
+          controls
+        ></video>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img3.JPG"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img4.JPG"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img5.JPG"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img6.JPG"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img7.jpg"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img8.JPG"
+      />
+    </swiper-slide>
+    <swiper-slide>
+      <img
+        class="mx-auto h-96 rounded-lg object-cover"
+        src="../assets/img9.JPG"
+      />
+    </swiper-slide>
+  </swiper-container>
+  <footer class="mx-auto">
     P.D.: I
     <lord-icon
       src="https://cdn.lordicon.com/jjoolpwc.json"
@@ -12,4 +87,10 @@
     </lord-icon>
     you
   </footer>
+  <audio class="mx-auto" controls>
+    <source src="../assets/lloviendo.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 </main>
+
+<dialog id="carta">carta</dialog>

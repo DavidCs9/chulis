@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+dialog {
+  transform: scale(0);
+  transition-property: display opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+} /* You can add global styles to this file, and also import other style files */

@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,6 +10,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'chulis';
+  cartaDialog!: HTMLDialogElement;
+
+  ngOnInit(): void {
+    this.cartaDialog = document.querySelector('#carta')!;
+  }
+
+  openCarta() {
+    this.cartaDialog.showModal();
+  }
+
+  closeCarta() {
+    this.cartaDialog.close();
+  }
 }
