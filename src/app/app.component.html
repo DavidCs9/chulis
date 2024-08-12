@@ -181,3 +181,13 @@
   <h4 class="font-semibold text-red-700">Te amo</h4>
   <footer>David</footer>
 </dialog>
+
+<script *ngIf="isMonthverse">
+  window.onload = function () {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  };
+</script>
