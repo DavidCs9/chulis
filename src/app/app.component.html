@@ -18,7 +18,10 @@
       <img class="h-20 rounded-lg object-cover" src="../assets/nutria.jpg" />
     </button>
   </div>
-  <h2 class="text-center text-gray-700">¡Feliz mesiversario!</h2>
+  <h2 *ngIf="isMonthverse" class="text-center text-gray-700">
+    ¡Feliz mesiversario!
+  </h2>
+  <h3 class="text-center text-sm">Dias andando 😌: {{ daysSince }}</h3>
   <swiper-container speed="500" loop="true" class="w-full">
     <swiper-slide>
       <div>
